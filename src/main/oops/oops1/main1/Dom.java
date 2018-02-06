@@ -14,7 +14,7 @@ import java.util.List;
  * @version 1.0
  */
 public class Dom {
-	Element element;
+	private Element element;
 	public Dom(Element root){
 		element = (CompositeElement) root;
 	}

@@ -13,7 +13,7 @@ import main.oops.oops1.main1.Element;
  * @author Manasi Pandya
  * @version 1.0
  */
-public abstract class AtomicElement extends Element{
+public class AtomicElement extends Element{
 	
 	/**
 	 * 

@@ -43,21 +43,15 @@ public abstract class Element {
 		return className;
 	}
 
-	public Element findById( String id){
-		return null;
-	}
+	public abstract Element findById( String id);
 	
-	public List<Element> findByClass(String className){
-		return null;
-	}
+	public abstract List<Element> findByClass(String className);
 	/**
 	 * Recursive function to find the hierarchy of elements
 	 * @param element - the composite element
 	 * @param count - counts the hierarchy, upto what level the element is
 	 * @return - the list
 	 */
-	public List<String> displayDomRecursive(String spaces){
-		return null;
-	}
+	public abstract List<String> displayDomRecursive(String spaces);
 		
 }

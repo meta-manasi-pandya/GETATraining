@@ -15,14 +15,14 @@ import main.oops.oops1.main1.Element;
 public class CompositeElement extends Element{
 	
 	// List stores tags inside parent tag
-	List<Element> element = new ArrayList<Element>();
+	List<Element> element;
 	
 	// constructor to initialization of values
 	public CompositeElement(String id, String className) {
 		
 		// calling parent class for initialization
 		super(id,className);
-		
+		element = new ArrayList<Element>();
 	}
 	
 	// method for adding Tag

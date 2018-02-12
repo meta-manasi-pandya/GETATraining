@@ -1,0 +1,106 @@
+ @import url('https://fonts.googleapis.com/css?family=Montserrat');
+    .Row
+    {
+        /*display: table-row;*/
+        width: 100%;
+        height: 100vh;
+    }
+    .Cell
+    {
+        width: 50%;
+        float: left;
+    }
+
+    #main-profile-image {
+    height: auto; }
+
+  
+    #main-profile-image img {
+    max-width: 50%;
+    height: auto;
+    vertical-align: right;
+    position: fixed;
+    right: 0; 
+    top: 0;}
+
+    body{
+        color: #666;
+        font-family: 'Montserrat', sans-serif;
+        background-color: #fff;
+        background-color: #111;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+        padding-left: 20px;
+        font-family: 'Montserrat', sans-serif;
+    }
+    #m{
+        color: #666;
+        background-color: #fff;
+        background-color: #111;
+    }
+    a{
+        color: #A6ACAF;
+    }
+    a:hover{
+        color: white;
+    }
+    ul{
+        font-size: 20px;
+    }
+    div{
+        /*font-size: 20px;*/
+        font-family: 'Montserrat', sans-serif;
+    }
+	m{
+		color: #A6ACAF;
+	}
+	
+	/*Social-icons*/
+	.afa {
+    padding: 20px;
+    font-size: 30px;
+    width: 30px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 50%;
+	}
+
+	/* Add a hover effect if you want */
+	.afa:hover {
+		opacity: 0.7;
+	}
+
+	/* Set a specific color for each brand */
+
+	/* Facebook */
+	.fa-facebook {
+		background: #3B5998;
+		color: white;
+	}
+
+	/* Twitter */
+	.fa-twitter {
+		background: #55ACEE;
+		color: white;
+	}
+	
+	.fa-google {
+		background:#dd4b39;
+		color: white;
+	}
+	
+	.fa-pinterest {
+		background: #cb2027;
+		color: white;
+	}
+	
+	.fa-linkedin {
+		background: #007bb5;
+		color: white;
+	}
+	
+	.fa-instagram {
+		background: #125688;
+		color: white;
+	}

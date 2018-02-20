@@ -1,12 +1,18 @@
 package main.pf.pf1;
 import static org.junit.Assert.*;
 
+import org.junit.Before;
 import org.junit.Test;
 /**
  * A class which contains all the test cases.
  */
 public class JoinTest {
-	Join result = new Join();				//Object is created
+	Join result = null;				//Object is created
+
+	@Before
+	   public void executedBefore() {
+		result = new Join();
+	}
 
 	@Test
 	public void testJoin1(){				//Test-case 1

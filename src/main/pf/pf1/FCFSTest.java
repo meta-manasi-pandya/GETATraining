@@ -2,7 +2,9 @@ package main.pf.pf1;
 
 import static org.junit.Assert.*;
 
+import org.junit.Before;
 import org.junit.Test;
+
 import java.util.Arrays;
 import java.util.Arrays;
 /**
@@ -10,7 +12,12 @@ import java.util.Arrays;
  */
 
 public class FCFSTest {
-	FCFS result = new FCFS();				//Object of the class
+	FCFS result = null;				//Object of the class
+	
+	@Before
+	   public void executedBefore() {
+		result = new FCFS();
+    }
 
 	@Test
 	public void testFCFS(){ 						//Test-case 1

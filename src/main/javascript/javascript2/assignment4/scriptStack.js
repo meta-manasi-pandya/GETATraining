@@ -1,22 +1,22 @@
 /**
- /*class used to create stack and performing operation like push and pop
+ * class used to create stack and performing operation like push and pop
  */
 class Stack{
 	
-	constructor () {
+	constructor() {
 		this.stack = [];
 		this.top = 0;
 		this.max = 20;
 	}
 	
 	/* getter to return the stack*/
-	get getList () {
+	get getList() {
 		return this.stack;
 	}
 }
 
 /* method to pop the top most element from stack*/
-Stack.prototype.pop = function () {
+Stack.prototype.pop = function() {
 		
 		if(this.top < 0){
 			alert("stack underflow");
@@ -28,7 +28,7 @@ Stack.prototype.pop = function () {
 	}
 	
 /* method for push the element onto the stack*/
-Stack.prototype.push = function (item) {
+Stack.prototype.push = function(item) {
 	
 	if(this.top > this.max){
 		alert("stack overflow");

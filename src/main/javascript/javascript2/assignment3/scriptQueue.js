@@ -3,23 +3,23 @@
  */
 class Node {
 	
-	constructor (val) {
+	constructor(val) {
 		this.data = val;
 		this.next = null;
 	}
 	
 	/* getter to get data*/
-	get getData () {
+	get getData() {
 		return this.data;
 	}
 	
 	/* getter to get next node or link*/
-	get nextLink () {
+	get nextLink() {
 		return this.next;
 	}
 	
 	/* setter to set next node or link*/
-	set nextLink (link) {
+	set nextLink(link) {
 		this.next = link;
 	}
 }
@@ -30,27 +30,27 @@ class Node {
  */
 class Queue{
 	
-	constructor () {
+	constructor() {
 		this.front = null;
 		this.rear = null;
 		this.size = 20;
 		this.length = 0;
 	}
 	
-	isEmpty () {
+	isEmpty() {
 		return this.front == null;
 	}
 	
-	isFull () {
+	isFull() {
 		return this.length == this.size;
 	}
 	
 	/* getter for returning the queue as an array*/
-	get getList () {
+	get getList() {
 		var ptr = this.front;
 		var array = [];
-		while ( ptr != null ) {
-			array.push ( ptr.getData );
+		while( ptr != null ) {
+			array.push( ptr.getData );
 			ptr = ptr.nextLink;
 		}
 		return array;
@@ -58,15 +58,16 @@ class Queue{
 }
 
 /* method for inserting data at the end of queue*/
-Queue.prototype.enqueue = function (val) {
-	var link = new Node (val);
+Queue.prototype.enqueue = function(val) {
+	var link = null;
+	link = new Node(val);
 	
-	if ( this.isEmpty() ) {
+	if( this.isEmpty() ) {
 		this.front = link;
 		this.rear = link;
 		this.length++;
 		
-	} else if (this.isFull() ) {
+	} else if(this.isFull() ) {
 		alert("queue full");
 		
 	} else {
@@ -77,8 +78,8 @@ Queue.prototype.enqueue = function (val) {
 }
 
 /*method to remove element from the start of queue*/
-Queue.prototype.dequeue = function () {
-	if ( this.isEmpty() ) {
+Queue.prototype.dequeue = function() {
+	if( this.isEmpty() ) {
 		alert("queue empty");
 	} else {
 		this.front = this.front.nextLink;

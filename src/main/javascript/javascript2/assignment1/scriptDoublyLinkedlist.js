@@ -52,7 +52,7 @@ class LinkedList {
 		this.size = 0;
 	}
 	
-	/* method to insert an element at starting positionition*/
+	/* method to insert an element at starting position*/
 	insertAtStart(val) {
         var nptr = new Node(val);    
         this.size++ ;  
@@ -68,7 +68,7 @@ class LinkedList {
         }
     }
 	
-	/* method to insert an element at last positionition*/
+	/* method to insert an element at last position*/
 	insertAtEnd(val) {
         var nptr = new Node (val);    
         this.size++ ;    
@@ -89,25 +89,25 @@ class LinkedList {
 		this.insertAtEnd(val);
 	}
 	
-	/* method to insert an element at specified positionition*/
+	/* method to insert an element at specified position*/
 	insertAtPosition(position, val) {
 		
 		if(position == 1) {
-			this.insertAtStart (val);
+			this.insertAtStart(val);
 			
-		} else if ( position == this.size + 1) {
-			this.insertAtEnd (val);
+		} else if( position == this.size + 1) {
+			this.insertAtEnd(val);
 			
-		} else if (position > this.size + 1) {
+		} else if(position > this.size + 1) {
 			
-			while( this.size != position - 1) {
+			while(this.size != position - 1) {
 				this.insertAtEnd(0);
 			}
 			this.insertAtEnd(val);
 			this.size--;
 			
 		} else {
-			var nptr = new Node (val);                
+			var nptr = new Node(val);                
 			var ptr = this.start;
 			position = position - 1 ;
 			
@@ -126,7 +126,7 @@ class LinkedList {
 		this.size++ ;
     }
 	
-	/* method to delete an element at specified positionition*/
+	/* method to delete an element at specified position*/
 	deleteAtPosition(position) { 
 		
 		if(position > this.size) {
@@ -172,7 +172,7 @@ class LinkedList {
 	/*method which return the list as an array*/
 	getList() {
 		var ptr = this.start;
-		var array = []
+		var array = [];
 		while( ptr != null) {
 			array.push( ptr.data );
 			ptr = ptr.nextLink;

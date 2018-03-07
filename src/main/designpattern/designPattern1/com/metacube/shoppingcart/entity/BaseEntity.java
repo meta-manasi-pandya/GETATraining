@@ -1,0 +1,26 @@
+package main.designpattern.designPattern1.com.metacube.shoppingcart.entity;
+
+import java.util.UUID;
+/**
+ * this class provide Id to all objects like product, user, shoppingCart etc
+ * @author Manasi Pandya
+ *
+ */
+public class BaseEntity {
+	protected int id;
+
+	public BaseEntity(){
+		UUID uuid = UUID.randomUUID();
+		this.id = Integer.parseInt(uuid.toString());
+		
+	}
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
+	
+	
+}

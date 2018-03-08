@@ -3,7 +3,7 @@ package main.designpattern.designPattern1.com.metacube.shoppingcart.facade;
 
 import java.util.List;
 
-import main.designpattern.designPattern1.com.metacube.shoppingcart.dao.InMemoryProductDao;
+import main.designpattern.designPattern1.com.metacube.shoppingcart.dao.impl.InMemoryProductDao;
 import main.designpattern.designPattern1.com.metacube.shoppingcart.dao.ProductFactory;
 import main.designpattern.designPattern1.com.metacube.shoppingcart.dao.DatabaseEnum;
 import main.designpattern.designPattern1.com.metacube.shoppingcart.dao.StatusEnum;

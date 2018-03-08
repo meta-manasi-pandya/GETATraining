@@ -1,10 +1,12 @@
-package main.designpattern.designPattern1.com.metacube.shoppingcart.dao;
+package main.designpattern.designPattern1.com.metacube.shoppingcart.dao.impl;
 
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+
+import main.designpattern.designPattern1.com.metacube.shoppingcart.dao.BaseDao;
 
 import main.designpattern.designPattern1.com.metacube.shoppingcart.entity.Product;
 
@@ -15,20 +17,22 @@ import main.designpattern.designPattern1.com.metacube.shoppingcart.entity.Produc
  */
 public class InMemoryProductDao implements BaseDao {
 	
-	 public Map<Integer , Product> allProducts = new HashMap<>();
+	 public Map<Integer , Product> allProducts;
+	 
+	 public InMemoryProductDao() {
+		 allProducts = new HashMap<>();
+	 }
 
 	/**
 	 * this method returns list of products
 	 * @return - list of products
 	 */
 	public List<Product> getAll() {
-		List<Product> list = null;
-		list = new ArrayList<Product>(allProducts.values());
+		List<Product> list = new ArrayList<Product>(allProducts.values());
 		return list;
 	}
 	public Set<Integer> getProductId(){
-		Set<Integer> setOfProductId = null;
-		setOfProductId = allProducts.keySet();
+		Set<Integer> setOfProductId = allProducts.keySet();
 		return setOfProductId;
 	}
 	/**
@@ -57,8 +61,7 @@ public class InMemoryProductDao implements BaseDao {
 	 */
 	@Override
 	public void updateProduct(int productId, String productName, double price) {
-		Product product = null;
-		product = allProducts.get(productId);
+		Product product = allProducts.get(productId);
 		product.setName(productName);
 		product.setPrice(price);
 	}

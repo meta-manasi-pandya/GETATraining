@@ -1,5 +1,7 @@
 package main.designpattern.designPattern1.com.metacube.shoppingcart.dao;
 
+import main.designpattern.designPattern1.com.metacube.shoppingcart.dao.impl.InMemoryProductDao;
+
 /**
  * This class is used to return storage instance type 
  * like in-memory or database type

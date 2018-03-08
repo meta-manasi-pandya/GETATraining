@@ -1,7 +1,5 @@
 package main.designpattern.designPattern1.com.metacube.shoppingcart.facade;
 
-import main.designpattern.designPattern1.com.metacube.shoppingcart.facade.ShoppingFacade;
-
 /**
  * This class performs operation related to Shopping cart like total etc.
  * @author Manasi Pandya

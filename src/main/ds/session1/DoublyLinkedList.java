@@ -11,18 +11,16 @@ import java.util.NoSuchElementException;
  * @author Manasi Pandya
  */
 public class DoublyLinkedList {
-	
-	DoublyNode startNode;							//Contains the address of starting node of the list
-	DoublyNode lastNode;							//Contains the address of last node of the list
+	private DoublyNode startNode;							//Contains the address of starting node of the list
+	private DoublyNode lastNode;							//Contains the address of last node of the list
 	
 	/**
 	 * Used to add an element at the end of the list
 	 * @param {int}data - the data to be added
 	 */
-	void addElement(int data){
+	void addElement(int data) {
 		DoublyNode newNode = new DoublyNode();			//making a new node
 		newNode.data = data;
-		
 		/* adding the node when list is empty */
 		if(startNode == null) {
 			startNode = newNode;
@@ -31,7 +29,6 @@ public class DoublyLinkedList {
 			newNode.previous = lastNode;
 			lastNode.next = newNode;
 		}
-		
 		lastNode = newNode;
 	}
 	
@@ -40,36 +37,32 @@ public class DoublyLinkedList {
 	 * @param {int}data - the data to be added
 	 * @param {int}position - the position at which the data is to be added
 	 */
-	void addElement(int data,int position){
-		DoublyNode start = startNode;
+	void addElement(int data,int position) {
+		DoublyNode start = startNode; 
 		int i;
-		
 		/* Used to traverse the list to the position needed */
-		for(i = 1; (i < position - 1) && (start != null); i++){
+		for(i = 1; (i < position - 1) && (start != null); i++) {
 			start = start.next;
 		}
-		
 		/* checking for index out of bound */
-		if((start != null) && (i <= position)){
+		if((start != null) && (i <= position)) {
 			DoublyNode newNode = new DoublyNode();
 			newNode.data = data;
-			
 			/*For adding element at the start of the list*/
-			if(position == 1){
+			if(position == 1) {
 				newNode.previous = null;
 				newNode.next = start;
 				start.previous = newNode;
 				startNode = newNode;				
 			}
-			else{
-				
+			else {
 				/*check to add element at the ending of the list*/
-				if(start != lastNode){
+				if(start != lastNode) {
 					
 					start.next.previous = newNode;
 					newNode.next = start.next;	
 				}
-				else{
+				else {
 					
 					lastNode = newNode;
 					newNode.next = null;
@@ -79,9 +72,8 @@ public class DoublyLinkedList {
 				newNode.previous = start;
 			}
 		}
-		
 		/*exception for the case position is larger than the list*/
-		else{
+		else {
 			throw new ArrayIndexOutOfBoundsException(i);
 		}
 	}
@@ -90,12 +82,11 @@ public class DoublyLinkedList {
 	 * This function is used to remove data from the linked list
 	 * @param {int}data - data to be removed from the list
 	 */
-	void removeByData(int data){
+	void removeByData(int data) {
 		DoublyNode start = startNode;
-		
 		/*Searching for the data to be removed*/
-		while(start.next != null){
-			if(start.data == data){
+		while(start.next != null) {
+			if(start.data == data) {
 				break;
 			}
 			start = start.next;
@@ -103,14 +94,14 @@ public class DoublyLinkedList {
 		if((start == lastNode) && (start.data != data)) {
 			throw new NoSuchElementException();
 		}
-		if(start == startNode){
+		if(start == startNode) {
 			startNode = start.next;
 		}
-		if(start != lastNode){
+		if(start != lastNode) {
 			start.previous.next = start.next;
 			start.next.previous = start.previous;
 		}
-		else{
+		else {
 			start.previous.next = null;
 		}
 	}
@@ -119,21 +110,19 @@ public class DoublyLinkedList {
 	 * This function is used to remove data at a particular index in the list
 	 * @param {int}position - position from which data is to be removed
 	 */
-	void removeByIndex(int position){
+	void removeByIndex(int position) {
 		DoublyNode start = startNode;
 		int i;
-		
 		/* Used to traverse the list to the position needed */
-		for(i = 1; (i < position) && (start != null) ; i++){
+		for(i = 1; (i < position) && (start != null) ; i++) {
 			start = start.next;
 		}
-		
 		/* checking for index out of bound */
-		if((start != null) && (i <= position)){
+		if((start != null) && (i <= position)) {
 			start.previous.next = start.next;
 			start.next.previous = start.previous;
 		}
-		else{
+		else {
 			throw new ArrayIndexOutOfBoundsException();
 		}
 	}
@@ -143,20 +132,18 @@ public class DoublyLinkedList {
 	 * @param {int}position - position at which data have to be returned
 	 * @return
 	 */
-	public int dataByIndex(int position){
+	public int dataByIndex(int position) {
 		DoublyNode start = startNode;
 		int i;
-		
 		/*Use to traverse till the position*/
-		for(i = 1; (i < position)&&(start != null) ; i++){
+		for(i = 1; (i < position) && (start != null) ; i++) {
 			start = start.next;
 		}
-		
 		/*Checking for index out of bound*/
-		if((start != null) && (i <= position)){
+		if((start != null) && (i <= position)) {
 			return start.data;
 		}
-		else{
+		else {
 			throw new ArrayIndexOutOfBoundsException();
 		}
 	}
@@ -164,15 +151,13 @@ public class DoublyLinkedList {
 	/**
 	 * Function used to reverse the list
 	 */
-	public void reverseLinkList(){
+	public void reverseLinkList() {
 		int size = getSize();
 		DoublyNode start = startNode;
 		DoublyNode last = lastNode;
 		int temp;
-		
 		/*Used to swap the first and last element of the list*/
-		for(int i = 0; i < (size / 2); i++){
-			
+		for(int i = 0; i < (size / 2); i++) {
 			/*swap*/
 			temp = start.data;
 			start.data  = last.data;
@@ -187,10 +172,10 @@ public class DoublyLinkedList {
 	 * private function used to get the size of the list
 	 * @return {int}
 	 */
-	private int getSize(){
+	private int getSize() {
 		int i= 0 ;
 		DoublyNode start = startNode;
-		while(start != null){
+		while(start != null) {
 			i++;
 			start = start.next;
 		}
@@ -200,17 +185,15 @@ public class DoublyLinkedList {
 	/**
 	 * This function is used to sort the list
 	 */
-	public void sortLinkList(){
+	public void sortLinkList() {
 		int size = getSize();
 		DoublyNode start = startNode.next;
 		
 		/*Insertion sort is used to sort this list out*/
-		for (int i=1; i < size; ++i)
-        {
+		for (int i=1; i < size; ++i) {
             int key = start.data;
             DoublyNode j = start.previous;
-            while (j != null && j.data > key)
-            {
+            while (j != null && j.data > key) {
                 j.next.data = j.data;
                 j = j.previous;
             }
@@ -222,7 +205,7 @@ public class DoublyLinkedList {
 	/**
 	 * Function used to show the list
 	 */
-	int[] show(){
+	int[] show() {
 		int size = getSize();
 		DoublyNode tempStart = startNode;
 		int[] linkList = new int[size];					//temp array used to store the link list	

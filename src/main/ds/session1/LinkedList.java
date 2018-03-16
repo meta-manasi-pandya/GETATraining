@@ -1,19 +1,16 @@
 package main.ds.session1;
-
 import java.util.NoSuchElementException;
-
 /*
- * This file contains a class for SinglyLinkKist
+ * This file contains a class for SinglyLinkedList
  */
 
 /**
- * This class is used  to make a singly link list
+ * This class is used  to make a singly linked list
  * @author Manasi Pandya
  */
 public class LinkedList {
-
-	Node startNode = null;								//Contains the address of starting node of the list			
-	Node lastNode = null;								//Contains the address of last node of the list
+	private Node startNode = null;								//Contains the address of starting node of the list			
+	private Node lastNode = null;								//Contains the address of last node of the list
 	
 	/**
 	 * Used to add an element at the end of the list
@@ -23,7 +20,6 @@ public class LinkedList {
 		Node newNode = new Node();						//making a new node
 		newNode.data = data;
 		newNode.next = null;
-		
 		/* adding the node when list is empty */
 		if(startNode == null) {
 			startNode = newNode;		
@@ -43,22 +39,18 @@ public class LinkedList {
 		Node newNode = new Node();
 		newNode.data = data;
 		Node start = startNode;
-		
 		/*For adding element at the start of the list*/
 		if(position == 1) {
 			newNode.next = startNode;
 			startNode = newNode;
 		}
 		else {
-			
 			/* Used to traverse the list to the position needed */
 			for(int i = 1; (i < position - 1) && (start != null); i++) {
 				start = start.next;
 			}
-			
 			/* checking for index out of bound */
 			if(start != null) {
-				
 				/*check to add element at the ending of the list*/
 				if(start == lastNode) {
 					newNode.next = null;
@@ -68,7 +60,6 @@ public class LinkedList {
 				}
 				start.next = newNode;
 			}
-			
 			/*exception for the case position is larger than the list*/
 			else {
 				throw new ArrayIndexOutOfBoundsException();
@@ -82,7 +73,6 @@ public class LinkedList {
 	 */
 	void removeElementByData(int data) {
 		Node start = startNode;
-	
 		/*Searching for the data to be removed*/
 		while(start.next != null) {
 			if(start.next.data == data) {
@@ -103,12 +93,10 @@ public class LinkedList {
 	void removeElementByIndex(int position) {
 		Node start = startNode;
 		int i;
-		
 		/* Used to traverse the list to the position needed */
 		for(i = 1; (i < position) && (start != null); i++) {
 			start = start.next;
 		}
-		
 		/* checking for index out of bound */
 		if((start != null) && (i <= position)) {
 			start.next = start.next.next;
@@ -125,17 +113,15 @@ public class LinkedList {
 	 */
 	int dataByIndex(int position) {
 		Node start = startNode;
-		
 		/*Use to traverse till the position*/
 		for(int i = 1; (i < position) && (start != null); i++) {
 			start = start.next;
 		}
-
 		/*Checking for index out of bound*/
-		if(start != null){
+		if(start != null) {
 			return start.data;
 		}
-		else{
+		else {
 			throw new ArrayIndexOutOfBoundsException();
 		}
 	}
@@ -146,16 +132,13 @@ public class LinkedList {
 	void reverseList() {
 		int size = getSize();
 		Node tempStart = startNode;
-		int[] temp = new int[size]; 					//temp array used to store the link list	
-		
+		int[] temp = new int[size]; 					//temp array used to store the link list
 		/*loop used to fill the array*/
 		for(int i = 0; i < size; i++) {
 			temp[i] = tempStart.data;
 			tempStart = tempStart.next;
 		}
-		
 		tempStart = startNode;
-		
 		/*initializing the reverse back*/
 		for(int i = size - 1; i >= 0; i--) {
 			tempStart.data = temp[i];
@@ -169,18 +152,15 @@ public class LinkedList {
 	void sortList() {		
 		int size = getSize();
 		Node tempStart = startNode;
-		int[] temp = new int[size];					//temp array used to store the link list	
-		
+		int[] temp = new int[size];					//temp array used to store the link list
 		/*initializing the array*/
 		for(int i = 0; i < size; i++) {
 			temp[i] = tempStart.data;
 			tempStart = tempStart.next;
 		}
-		
 		QuickSort q = new QuickSort();
 		q.sort(temp, 0, size - 1);
 		tempStart = startNode;
-		
 		/*initialing back the list*/
 		for(int i = 0; i < size; i++) {
 			tempStart.data = temp[i];
@@ -195,7 +175,6 @@ public class LinkedList {
 	private int getSize() {
 		int size = 0;
 		Node tempStart = startNode;
-		
 		while(tempStart != null) {
 			size++;
 			tempStart = tempStart.next;
@@ -209,8 +188,7 @@ public class LinkedList {
 	int[] show() {
 		int size = getSize();
 		Node tempStart = startNode;
-		int[] linkList = new int[size];					//temp array used to store the link list	
-		
+		int[] linkList = new int[size];					//temp array used to store the link list
 		/*initializing the array*/
 		for(int i = 0; i < size; i++) {
 			linkList[i] = tempStart.data;

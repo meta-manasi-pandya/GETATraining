@@ -10,7 +10,6 @@ import java.util.NoSuchElementException;
  */
 public class ArrayList {
 	private int[] arrayList; 
-	
 	/**
 	 * Constructor of arraylist 
 	 */
@@ -66,7 +65,6 @@ public class ArrayList {
 	 * @return int - element at given index
 	 */
 	public int getElementByPosition(int position) {
-		
 		//to check if given position is valid or not
 		if(position <= arrayList.length && position > 0) {
 			return arrayList[position-1];
@@ -81,7 +79,6 @@ public class ArrayList {
 	 * @return position
 	 */
 	public int getPositionByElement(int element) {
-		
 		//to check the position of element in the array
 		for(int i = 0 ; i < arrayList.length ; i++) {
 			if(element == arrayList[i]) {
@@ -132,7 +129,7 @@ public class ArrayList {
 			}
 		}
 		//if element not found
-		if(flag == 0){
+		if(flag == 0) {
 			throw new NoSuchElementException();
 		}
 		//calling method to delete the element by position

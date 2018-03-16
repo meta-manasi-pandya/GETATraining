@@ -7,7 +7,7 @@ import org.junit.Test;
 
 public class ArrayListTest {
 
-	ArrayList arrayList;
+	private ArrayList arrayList;
 	
 	/**
 	 * this method initializes the Array list using add function
@@ -26,7 +26,7 @@ public class ArrayListTest {
 	 */
 	@Test
 	public void addElementTest() {
-		int[] expected = new int[] {1,5,3,7,2};
+		int[] expected = new int[]{1,5,3,7,2};
 		int[] actual = arrayList.add(2);
 		assertArrayEquals(expected, actual);
 	}
@@ -36,7 +36,7 @@ public class ArrayListTest {
 	 */
 	@Test(expected = ArrayIndexOutOfBoundsException.class)
 	public void addElementAtPositionTest() {
-		int[] expected = new int[] {1,5,3,6,7};
+		int[] expected = new int[]{1,5,3,6,7};
 		int[] actual = arrayList.add(6 , 7);
 		assertArrayEquals(expected, actual);
 	}
@@ -66,7 +66,7 @@ public class ArrayListTest {
 	 */
 	@Test
 	public void deleteByPositionTest() {
-		int[] expected = new int[] {1,5,7};
+		int[] expected = new int[]{1,5,7};
 		int[] actual = arrayList.deleteByPosition(3);
 		assertArrayEquals(expected, actual);
 	}
@@ -76,7 +76,7 @@ public class ArrayListTest {
 	 */
 	@Test
 	public void deleteByElementTest() {
-		int[] expected = new int[] {1,3,7};
+		int[] expected = new int[]{1,3,7};
 		int[] actual = arrayList.deleteByElement(5);
 		assertArrayEquals(expected, actual);
 	}
@@ -86,7 +86,7 @@ public class ArrayListTest {
 	 */
 	@Test
 	public void clearAllTest() {
-		int[] expected = new int[] {};
+		int[] expected = new int[]{};
 		int[] actual = arrayList.clearAll();
 		assertArrayEquals(expected, actual);
 	}
@@ -96,7 +96,7 @@ public class ArrayListTest {
 	 */
 	@Test
 	public void reverseTest() {
-		int[] expected = new int[] {7,3,5,1};
+		int[] expected = new int[]{7,3,5,1};
 		int[] actual = arrayList.reverse();
 		assertArrayEquals(expected, actual);
 	}
@@ -106,7 +106,7 @@ public class ArrayListTest {
 	 */
 	@Test
 	public void sortTest() {
-		int[] expected = new int[] {1,3,5,7};
+		int[] expected = new int[]{1,3,5,7};
 		int[] actual = arrayList.sort();
 		assertArrayEquals(expected, actual);
 	}
@@ -116,7 +116,7 @@ public class ArrayListTest {
 	 */
 	@Test
 	public void mergeTest() {
-		int[] expected = new int[] {1,5,3,7,8,9,6};
+		int[] expected = new int[]{1,5,3,7,8,9,6};
 		ArrayList newArrayList = new ArrayList();
 		newArrayList.add(8);
 		newArrayList.add(9);

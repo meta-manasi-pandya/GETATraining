@@ -1,18 +1,14 @@
 package main.ds.session1;
-
 import static org.junit.Assert.*;
-
 import java.util.NoSuchElementException;
-
 import org.junit.Before;
 import org.junit.Test;
 
 public class LinkedListTest {
 
-	LinkedList linkList;
+	private LinkedList linkList;
 	@Before
 	public void init() {
-		
 		linkList = new LinkedList();
 		linkList.addElement(1);
 		linkList.addElement(8);
@@ -27,7 +23,6 @@ public class LinkedListTest {
 	
 	@Test
 	public void testAddElement() {
-		
 		int[] expected = {1,8,3,4,5,6,7,8,9};
 		int[] actual = linkList.show();
 		assertArrayEquals(expected, actual);
@@ -40,7 +35,6 @@ public class LinkedListTest {
 	
 	@Test
 	public void testRemoveElementByData() {
-		
 		linkList.removeElementByData(9);
 		int[] expected = {1,8,3,4,5,6,7,8};
 		int[] actual = linkList.show();
@@ -49,13 +43,11 @@ public class LinkedListTest {
 	
 	@Test(expected = NoSuchElementException.class)
 	public void testRemoveElementByDataException() {
-		
 		linkList.removeElementByData(10);
 	}
 	
 	@Test
 	public void testRemoveElementByIndex() {
-		
 		linkList.removeElementByIndex(8);
 		int[] expected = {1,8,3,4,5,6,7,8};
 		int[] actual = linkList.show();
@@ -64,20 +56,17 @@ public class LinkedListTest {
 	
 	@Test(expected = ArrayIndexOutOfBoundsException.class)
 	public void testRemoveElementByIndexException() {
-		
 		linkList.removeElementByIndex(11);
 	}
 	
 	@Test
 	public void testDataAtIndex() {
-		
 		int expected = 7;
 		assertEquals(expected, linkList.dataByIndex(7));
 	}
 	
 	@Test
 	public void testReverse() {
-		
 		linkList.reverseList();
 		int[] expected = {9,8,7,6,5,4,3,8,1};
 		int[] actual = linkList.show();
@@ -86,7 +75,6 @@ public class LinkedListTest {
 	
 	@Test
 	public void testSort() {
-		
 		linkList.sortList();
 		int[] expected = {1,3,4,5,6,7,8,8,9};
 		int[] actual = linkList.show();

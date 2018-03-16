@@ -9,11 +9,9 @@ import org.junit.Test;
 
 
 public class DoublyLinkedListTest {
-
-	DoublyLinkedList linkList;
+	private DoublyLinkedList linkList;
 	@Before
 	public void init() {
-		
 		linkList = new DoublyLinkedList();
 		linkList.addElement(1);
 		linkList.addElement(8);
@@ -28,7 +26,6 @@ public class DoublyLinkedListTest {
 	
 	@Test
 	public void testAddElement() {
-		
 		int[] expected = {1,8,3,4,5,6,7,8,9};
 		int[] actual = linkList.show();
 		assertArrayEquals(expected, actual);
@@ -41,7 +38,6 @@ public class DoublyLinkedListTest {
 	
 	@Test
 	public void testRemoveElementByData() {
-		
 		linkList.removeByData(9);
 		int[] expected = {1,8,3,4,5,6,7,8};
 		int[] actual = linkList.show();
@@ -50,13 +46,11 @@ public class DoublyLinkedListTest {
 	
 	@Test(expected = NoSuchElementException.class)
 	public void testRemoveElementByDataException() {
-		
 		linkList.removeByData(10);
 	}
 	
 	@Test
 	public void testRemoveElementByIndex() {
-		
 		linkList.removeByIndex(8);
 		int[] expected = {1,8,3,4,5,6,7,9};
 		int[] actual = linkList.show();
@@ -65,20 +59,17 @@ public class DoublyLinkedListTest {
 	
 	@Test(expected = ArrayIndexOutOfBoundsException.class)
 	public void testRemoveElementByIndexException() {
-		
 		linkList.removeByIndex(11);
 	}
 	
 	@Test
 	public void testDataAtIndex() {
-		
 		int expected = 7;
 		assertEquals(expected, linkList.dataByIndex(7));
 	}
 	
 	@Test
 	public void testReverse() {
-		
 		linkList.reverseLinkList();
 		int[] expected = {9,8,7,6,5,4,3,8,1};
 		int[] actual = linkList.show();
@@ -87,7 +78,6 @@ public class DoublyLinkedListTest {
 	
 	@Test
 	public void testSort() {
-		
 		linkList.sortLinkList();
 		int[] expected = {1,3,4,5,6,7,8,8,9};
 		int[] actual = linkList.show();

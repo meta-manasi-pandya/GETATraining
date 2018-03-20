@@ -31,7 +31,7 @@ public class Precedence {
 	 * @param operator
 	 * @return the precedence value for the calling operator
 	 */
-	public int getPrecedence(char operator){
+	public int getPrecedence(char operator) {
 		return operatorPrecedence.get(operator);
 	}
 	

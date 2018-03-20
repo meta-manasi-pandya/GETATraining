@@ -17,7 +17,7 @@ public class DoublyLinkedList {
 	 * Used to add an element at the end of the list
 	 * @param {int}data - the data to be added
 	 */
-	void addElement(int data) {
+	public void addElement(int data) {
 		DoublyNode newNode = new DoublyNode();			//making a new node
 		newNode.data = data;
 		/* adding the node when list is empty */
@@ -36,7 +36,7 @@ public class DoublyLinkedList {
 	 * @param {int}data - the data to be added
 	 * @param {int}position - the position at which the data is to be added
 	 */
-	void addElement(int data,int position) {
+	public void addElement(int data,int position) {
 		DoublyNode start = startNode; 
 		int i;
 		/* Used to traverse the list to the position needed */
@@ -81,7 +81,7 @@ public class DoublyLinkedList {
 	 * This function is used to remove data from the linked list
 	 * @param {int}data - data to be removed from the list
 	 */
-	void removeByData(int data) {
+	public void removeByData(int data) {
 		DoublyNode start = startNode;
 		/*Searching for the data to be removed*/
 		while(start.next != null) {
@@ -109,7 +109,7 @@ public class DoublyLinkedList {
 	 * This function is used to remove data at a particular index in the list
 	 * @param {int}position - position from which data is to be removed
 	 */
-	void removeByIndex(int position) {
+	public void removeByIndex(int position) {
 		DoublyNode start = startNode;
 		int i;
 		/* Used to traverse the list to the position needed */

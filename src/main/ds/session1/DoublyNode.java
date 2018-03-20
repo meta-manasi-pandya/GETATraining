@@ -1,7 +1,7 @@
 package main.ds.session1;
 
 public class DoublyNode {
-	DoublyNode previous;
-	int data;
-	DoublyNode next;
+	public DoublyNode previous;
+	public int data;
+	public DoublyNode next;
 }

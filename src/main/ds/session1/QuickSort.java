@@ -11,7 +11,7 @@ public class QuickSort {
      * @param {high}high the last index
      * @return {int} partition index
      */
-    int partition(int arr[], int low, int high) {
+    private int partition(int arr[], int low, int high) {
         int pivot = arr[high]; 
         int i = (low - 1);                                  // index of smaller element
         for (int j=low; j<high; j++) {
@@ -37,7 +37,7 @@ public class QuickSort {
      * @param {int}high ending index of the array 
      * @return {int[]}arr sorted array
      */
-    int[] sort(int arr[], int low, int high) {
+    public int[] sort(int arr[], int low, int high) {
         if (low < high) {
             /* pi is partitioning index, arr[pi] is 
               now at right place */

@@ -1,5 +1,4 @@
 package main.ds.session1;
-
 import java.util.NoSuchElementException;
 
 /*
@@ -205,7 +204,7 @@ public class DoublyLinkedList {
 	/**
 	 * Function used to show the list
 	 */
-	int[] show() {
+	public int[] show() {
 		int size = getSize();
 		DoublyNode tempStart = startNode;
 		int[] linkList = new int[size];					//temp array used to store the link list	

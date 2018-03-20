@@ -4,11 +4,12 @@ import java.util.Arrays;
 import java.util.List;
 
 /**
- * This class simulates the counselling process.
+ * This class simulates the counseling process.
  * @author Manasi Pandya
  *
  */
 public class Counselling {
+	
 	public List<String> startCounselling(Queue<Candidate> candidateQueue, List<College> collegeQueue, int[] input) {
 		Arrays.sort(candidateQueue.getQueueArray());    //Sorting candidates according to their marks
 		int inputCounter = 0;
@@ -23,7 +24,7 @@ public class Counselling {
 			int j;
 			
 			//Printing the list of colleges.
-			for( j = 0; j<collegeQueue.size(); j++) {
+			for(j = 0; j<collegeQueue.size(); j++) {
 				if(collegeQueue.get(j).isAvailable()) {
 					flag = 1;
 					System.out.println("Id:"+(j+1)+"College name:"+collegeQueue.get(j).getName()+"  "+"Available seats:"+collegeQueue.get(j).getAvlSeats());
@@ -32,7 +33,7 @@ public class Counselling {
 			if(flag != 0) {
 				ch = input[inputCounter++]-1;   	//Choice entered by the candidate.
 				//For invalid choice.
-				if(((ch > j)&&(ch <= 0)) || (collegeQueue.get(ch).getAvlSeats()<=0)) {
+				if(((ch > j)||(ch < 0)) || (collegeQueue.get(ch).getAvlSeats()<=0)) {
 					throw new IllegalArgumentException("Wrong Choice");
 				}
 				c.setCollegeName(collegeQueue.get(ch).getName());

@@ -1,17 +1,14 @@
-package com.metacube.ds_2;
-
+package main.ds.session2.question2.main;
 import static org.junit.Assert.*;
-
 import org.junit.Before;
 import org.junit.Test;
-
-import com.metacube.exception.IllegalExpressionException;
+import main.ds.session2.question2.exception.IllegalExpressionException;
 
 public class InfixToPostfixTest {
 
-	String infixExpression1,infixExpression2;
-	String postfixExpression1,postfixExpression2;
-	InfixToPostfix infixToPostfixObject;
+	private String infixExpression1,infixExpression2;
+	private String postfixExpression1,postfixExpression2;
+	private InfixToPostfix infixToPostfixObject;
 	
 	@Before
 	public void setUp() {

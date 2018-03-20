@@ -5,6 +5,8 @@ package main.ds.session2.question1;
  */
 public class Candidate implements Comparable<Candidate> {
 	private String name;
+	private float marks;
+	private String collegeName;
 	public String getName() {
 		return name;
 	}
@@ -12,9 +14,6 @@ public class Candidate implements Comparable<Candidate> {
 	public void setName(String name) {
 		this.name = name;
 	}
-
-	private float marks;
-	private String collegeName;
 	
 	public String getCollegeName() {
 		return collegeName;
@@ -31,7 +30,7 @@ public class Candidate implements Comparable<Candidate> {
 	
 	@Override
 	public int compareTo(Candidate candidate) {		/*To compare candidate's marks*/
-		if( this.marks > candidate.marks)
+		if(this.marks > candidate.marks)
 			return -1;
 		else if( this.marks == candidate.marks)
 			return 0;

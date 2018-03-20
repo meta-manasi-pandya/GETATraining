@@ -1,13 +1,11 @@
-package com.metacube.exception;
-
-public class IllegalExpressionException extends Exception{
-
-	/**
-	 * 
-	 */
-	private static final long serialVersionUID = 1L;
+package main.ds.session2.question2.exception;
+/**
+ * @author Manasi Pandya
+ * Declaring our own exception.
+ */
+public class IllegalExpressionException extends Exception {
 	
-	String message(){
+	public String message() {
 		return "Illegal infix Expression entered";
 	}
 

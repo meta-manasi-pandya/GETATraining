@@ -1,11 +1,10 @@
-package com.metacube.utils;
-
+package main.ds.session2.question2.utils;
 /**
  * Node class to implement stack as a linked list
  * @author Manasi Pandya
  *
  */
-public class Node<T>{
+public class Node<T> {
 	private Node<T> nextLink;
 	private T data;	
 	

@@ -1,10 +1,8 @@
-package com.metacube.ds_2;
-
-import com.metacube.utils.*;
+package main.ds.session2.question2.main;
+import main.ds.session2.question2.utils.*;
 
 /**
  * Implements all stack functions :- Push, Pop, Peek
- * 
  * @author Manasi Pandya
  *
  */
@@ -15,17 +13,16 @@ public class Stack<T> {
 	/**
 	 * Initializes the stack with no elements
 	 */
-	public Stack(){
+	public Stack() {
 		this.top = null;
 		this.size = 0;
 	}
 	
 	/**
 	 * pushes data into stack at the top
-	 * 
 	 * @param data
 	 */
-	public void push(T data){
+	public void push(T data) {
 		Node<T> newNode = new Node<T>(data);
 		newNode.setNextLink(top);
 		top = newNode;
@@ -34,11 +31,10 @@ public class Stack<T> {
 	
 	/**
 	 * pops the data from the stack from the top
-	 * 
 	 * @return
 	 */
-	public T pop(){
-		if(this.size==0){
+	public T pop() {
+		if(this.size==0) {
 			System.out.println("Underflow");
 			return null;
 		}
@@ -49,18 +45,17 @@ public class Stack<T> {
 	}
 	
 	/**
-	 * 
 	 * @return last element of the stack
 	 */
-	public T peek(){
-		if(this.size==0){
+	public T peek() {
+		if(this.size==0) {
 			return null;
 		}
 		return top.getData();
 	}
 	
 	@Override
-	public String toString(){
+	public String toString() {
 		String str ="";
 		Node<T> ptr = this.top;
 		while(ptr != null){

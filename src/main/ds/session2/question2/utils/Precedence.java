@@ -1,4 +1,4 @@
-package com.metacube.utils;
+package main.ds.session2.question2.utils;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -9,12 +9,11 @@ import java.util.Map;
  *
  */
 public class Precedence {
-
-	Map<Character, Integer> operatorPrecedence;
+	private Map<Character, Integer> operatorPrecedence;
 	/**
 	 * Constructor to initialize the hashmap for operator precedence values for the calling stack
 	 */
-	public Precedence(){
+	public Precedence() {
 		
 		 operatorPrecedence = new HashMap<>();
 

@@ -1,9 +1,7 @@
 package main.ds.session1;
 
 import static org.junit.Assert.*;
-
 import java.util.NoSuchElementException;
-
 import org.junit.Before;
 import org.junit.Test;
 

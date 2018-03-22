@@ -16,7 +16,7 @@ public class LinkedList {
 	 * Used to add an element at the end of the list
 	 * @param {int}data - the data to be added
 	 */
-	void addElement(int data) {
+	public void addElement(int data) {
 		Node newNode = new Node();						//making a new node
 		newNode.data = data;
 		newNode.next = null;
@@ -35,7 +35,7 @@ public class LinkedList {
 	 * @param {int}data - the data to be added
 	 * @param {int}position - the position at which the data is to be added
 	 */
-	void addElement(int data, int position) {
+	public void addElement(int data, int position) {
 		Node newNode = new Node();
 		newNode.data = data;
 		Node start = startNode;
@@ -71,7 +71,7 @@ public class LinkedList {
 	 * This function is used to remove data from the linked list
 	 * @param {int}data - data to be removed from the list
 	 */
-	void removeElementByData(int data) {
+	public void removeElementByData(int data) {
 		Node start = startNode;
 		/*Searching for the data to be removed*/
 		while(start.next != null) {
@@ -90,7 +90,7 @@ public class LinkedList {
 	 * This function is used to remove data at a particular index in the list
 	 * @param {int}position - position from which data is to be removed
 	 */
-	void removeElementByIndex(int position) {
+	public void removeElementByIndex(int position) {
 		Node start = startNode;
 		int i;
 		/* Used to traverse the list to the position needed */
@@ -111,7 +111,7 @@ public class LinkedList {
 	 * @param {int}position - position at which data have to be returned
 	 * @return
 	 */
-	int dataByIndex(int position) {
+	public int dataByIndex(int position) {
 		Node start = startNode;
 		/*Use to traverse till the position*/
 		for(int i = 1; (i < position) && (start != null); i++) {
@@ -129,7 +129,7 @@ public class LinkedList {
 	/**
 	 * Function used to reverse the list
 	 */
-	void reverseList() {
+	public void reverseList() {
 		int size = getSize();
 		Node tempStart = startNode;
 		int[] temp = new int[size]; 					//temp array used to store the link list
@@ -149,7 +149,7 @@ public class LinkedList {
 	/**
 	 * This function is used to sort the list
 	 */
-	void sortList() {		
+	public void sortList() {		
 		int size = getSize();
 		Node tempStart = startNode;
 		int[] temp = new int[size];					//temp array used to store the link list
@@ -185,7 +185,7 @@ public class LinkedList {
 	/**
 	 * Function used to show the list
 	 */
-	int[] show() {
+	public int[] show() {
 		int size = getSize();
 		Node tempStart = startNode;
 		int[] linkList = new int[size];					//temp array used to store the link list

@@ -21,14 +21,14 @@ public class BinarySearch {
 	* If element is found it returns 1.
 	* Otherwise it returns -1.
 	*/
-	int binarySearch(int input[],int n,int low,int high){
+	public int binarySearch(int input[],int n,int low,int high) {
 		int mid;
-		if(high >= low){
+		if(high >= low) {
 			mid = low + (high-low)/2;
-			if(input[mid]==n){								//if element is found at 'mid'
+			if(input[mid]==n) {								//if element is found at 'mid'
 				return 1;
 			}
-			if(input[mid] < n){								//if element is greater than 'mid' element
+			if(input[mid] < n) {								//if element is greater than 'mid' element
 				return binarySearch(input,n,mid+1,high);
 			}
 			return binarySearch(input,n,low,mid-1);			//if element is smaller than 'mid' element

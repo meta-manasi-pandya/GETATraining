@@ -2,13 +2,19 @@ package main.pf.pf1;
 
 import static org.junit.Assert.*;
 
+import org.junit.Before;
 import org.junit.Test;
 /**
  * A class which contains all the test cases.
  */
 
 public class SortArrayTest {
-	SortArray sortCheck = new SortArray();			//Object of the class is created
+	private SortArray sortCheck = null;			//Object of the class is created
+
+	@Before
+	   public void executedBefore() {
+		sortCheck = new SortArray();
+    }
 
 
 	@Test											//Test-case 1

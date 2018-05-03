@@ -10,7 +10,13 @@ import org.junit.Test;
 
 public class ConvertBinToOctTest {
 	
-	ConvertBinaryToOctal binToOct = new ConvertBinaryToOctal();	//Object of the class
+	private ConvertBinaryToOctal binToOct = null;	//Object of the class
+	
+    @Before
+    public void executedBefore() {
+    	binToOct = new ConvertBinaryToOctal();
+    }
+
 
 
 	@Test													//Test-case 1

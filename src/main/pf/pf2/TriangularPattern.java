@@ -23,10 +23,10 @@ public class TriangularPattern {
      * @param n
      * @return str
      */
-    String spaces(int row,int n){
+    public String spaces(int row,int n) {
         String str="";
         int spaces=n-row;
-        for(int i=0;i<spaces;i++){
+        for(int i=0;i<spaces;i++) {
             str+=" ";
         }
         return str;
@@ -37,10 +37,10 @@ public class TriangularPattern {
      * @param n
      * @return str
      */
-    String numbers(int row,int n){
+    public String numbers(int row,int n) {
         String str="";
-        int i,j;
-        for(i=1;i<=row;i++){
+        int i;
+        for(i=1;i<=row;i++) {
             str+=i;
         }
         return str;
@@ -50,10 +50,10 @@ public class TriangularPattern {
      * @param n
      * @return pattern
      */
-    String[] print(int n){
+    public String[] print(int n) {
         int j=0;
         String pattern[] = new String[n];
-        for(int i=n;i>0;i--){
+        for(int i=n;i>0;i--) {
             pattern[j]=(spaces(i,n)+numbers(i,n));
             j++;
         }

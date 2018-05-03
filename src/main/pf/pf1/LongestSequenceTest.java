@@ -2,13 +2,19 @@ package main.pf.pf1;
 
 import static org.junit.Assert.*;
 
+import org.junit.Before;
 import org.junit.Test;
 /**
  * A class which contains all the test cases.
  */
 
-public class LongestSequenceTest{
-	LongestSequence lsequence = new LongestSequence();		//Object is created
+public class LongestSequenceTest {
+	private LongestSequence lsequence = null;		//Object is created
+	
+	@Before
+	   public void executedBefore() {
+		lsequence = new LongestSequence();
+	}
 
 	@Test
 	public void testLongestSequence1() {								//Test-case 1

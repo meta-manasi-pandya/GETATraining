@@ -13,12 +13,12 @@ public class FCFS {
 	 * duration between the job arrives and when it starts. Finish time is the entire duration
 	 * from which the job starts and completes.
 	 */
-	public int [][]FCFSMethod( int arrivalTime[], int jobSize[] ){
+	public int [][]FCFSMethod( int arrivalTime[], int jobSize[] ) {
 		int[][] result = new int[arrivalTime.length][5];
 		int waitingTime = 0, startTime = 1, finishTime = jobSize[0], colCounter = 0;
-		for(int rowCounter=0 ; rowCounter<arrivalTime.length ; rowCounter++){
+		for(int rowCounter=0 ; rowCounter<arrivalTime.length ; rowCounter++) {
 			colCounter = 0;
-			if(startTime < arrivalTime[rowCounter]){	//When scheduler is free but job has not arrived
+			if(startTime < arrivalTime[rowCounter]) {	//When scheduler is free but job has not arrived
 				startTime = arrivalTime[rowCounter];
 			}
 			finishTime = startTime + jobSize[rowCounter] - 1;

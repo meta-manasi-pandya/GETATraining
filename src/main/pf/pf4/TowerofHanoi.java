@@ -1,6 +1,7 @@
 package main.pf.pf4;
 
 import java.util.ArrayList;
+import java.util.List;
 /**
  * Class name-TowerofHanoi
  * 
@@ -9,7 +10,10 @@ import java.util.ArrayList;
  * Assignment - 1
  */
 public class TowerofHanoi {
-	ArrayList<String> discs = new ArrayList<String>();
+	private List<String> discs = null;
+	public TowerofHanoi() {
+		discs = new ArrayList<String>();
+	}
 	/**
 	 * This function consists of three rods or towers with 'n' disks placed one over the other.
 	 * Two rules are:
@@ -21,8 +25,8 @@ public class TowerofHanoi {
 	 * @param numOfDisks
 	 * @return discs
 	 */
-	public ArrayList<String> hanoi(String sourceRod, String destinationRod, String auxiliaryRod, int numOfDisks){
-		if(numOfDisks == 1){
+	public List<String> hanoi(String sourceRod, String destinationRod, String auxiliaryRod, int numOfDisks) {
+		if(numOfDisks == 1) {
 			//Move the bottom disk to the destination rod.
 			String solution1 = "Move Disk " + numOfDisks + " from " + sourceRod + " to " + destinationRod;
 			discs.add(solution1);

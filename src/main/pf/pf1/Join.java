@@ -16,9 +16,9 @@ public class Join {
 	 * containing smaller element.
 	 * If Yes: Copy all remaining elements of arrays.
 	 */
-	public int[] join(int a[], int asize, int b[], int bsize, int c[]){
+	public int[] join(int a[], int asize, int b[], int bsize, int c[]) {
 		int i=0, j=0, k=0;
-		while((i < asize) && (j < bsize)){
+		while((i < asize) && (j < bsize)) {
 			if(a[i] < b[j])			//Checking which array contains smaller element
 				c[k++] = a[i++];	//Post increment in the index of both array so that it points to new element now
 			else if(a[i] > b[j])

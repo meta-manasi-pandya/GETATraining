@@ -9,14 +9,14 @@ package main.pf.pf3;
  */
 /* A class to find GCD using recursion.
  */
-public class GreatestCommonDivisor{
+public class GreatestCommonDivisor {
 	/**
 	 * This function finds GCD of two numbers by successive division method.
 	 * @param x
 	 * @param y
 	 * @return x
 	 */
-	int gcd(int x, int y){
+	public int gcd(int x, int y) {
 	
 		 if (y != 0)
 	            return gcd(y, x % y);

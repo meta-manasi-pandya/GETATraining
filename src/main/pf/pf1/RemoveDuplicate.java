@@ -12,11 +12,11 @@ public class RemoveDuplicate {
 	 * all the unique elements of input array. First element of input array is copied as it is and afterwards element
 	 * from 'array' is checked in 'input' for duplicates. If no duplicate is found then it is added to 'array'. 
 	 */
-	public static int[] removeDuplicate(int input[]){
+	public int[] removeDuplicate(int input[]) {
 		int flag=0 ,j=0;
 		int[] array = new int[10];
 		int inputSize = input.length;
-		for(int i=0; i<inputSize; i++){
+		for(int i=0; i<inputSize; i++) {
 			flag = 0;
 			for(int k=0; k<j; k++)
 				if(array[k] == input[i])

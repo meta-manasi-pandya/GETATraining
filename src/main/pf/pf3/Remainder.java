@@ -16,17 +16,17 @@ public class Remainder {
 	 * @param y
 	 * @return result
 	 */
-	 int rem(int x, int y) {
+	 public int rem(int x, int y) {
 		 int result = 0;
-		 if(y==0){
+		 if(y==0) {
 			 return x;
 		 }
-		 else{
+		 else {
 			 result = x - y;
-			 if(result < y){
+			 if(result < y) {
 				 return result;
 			 }
-			 else{
+			 else {
 				 return rem(result,y);
 			 }
 		 }

@@ -1,13 +1,17 @@
 package main.pf.pf3;
 
 import static org.junit.Assert.*;
-
+import org.junit.Before;
 import org.junit.Test;
 
 
 public class GcdTest {
-	GreatestCommonDivisor gcdCheck = new GreatestCommonDivisor();
-
+	private GreatestCommonDivisor gcdCheck = null;
+	@Before
+	public void executedBefore() {
+		gcdCheck = new GreatestCommonDivisor();
+	}
+	
 	@Test
 	public void testGreatestCommonDivisor1() {
 		int expected = 1;

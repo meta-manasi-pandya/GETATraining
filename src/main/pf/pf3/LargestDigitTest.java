@@ -1,13 +1,16 @@
 package main.pf.pf3;
 
 import static org.junit.Assert.*;
-
+import org.junit.Before;
 import org.junit.Test;
 
 
 public class LargestDigitTest {
-	LargestDigit ldigit = new LargestDigit();
-	
+	private LargestDigit ldigit = null;
+	@Before
+	public void executedBefore() {
+		ldigit = new LargestDigit();
+	}
 	@Test
 	public void testLargestDigit1() {
 		int expected = 2;

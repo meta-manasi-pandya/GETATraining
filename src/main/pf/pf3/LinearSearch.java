@@ -19,11 +19,11 @@ public class LinearSearch {
 	 * @param loc
 	 * @return -1 or 1
 	 */
-	int linearSearch(int array[],int n,int loc){
-		if(loc >= array.length){
+	public int linearSearch(int array[],int n,int loc) {
+		if(loc >= array.length) {
 			return -1;
 		}
-		if(array[loc]==n){
+		if(array[loc]==n) {
 			return 1;
 		}
 			return linearSearch(array,n,loc+1);

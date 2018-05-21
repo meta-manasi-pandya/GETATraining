@@ -1,6 +1,7 @@
 package main.pf.pf4;
 
 import java.util.ArrayList;
+import java.util.List;
 /**
  * Class name-Permutations
  * 
@@ -9,7 +10,11 @@ import java.util.ArrayList;
  * Assignment - 2
  */
 public class Permutations {
-	ArrayList<String> permute = new ArrayList<String>();
+	private List<String> permute = null;
+	
+	public Permutations() {
+		permute = new ArrayList<String>();
+	}
 	/**
 	 * Below function swaps characters at two positions.
 	 * @param a
@@ -17,7 +22,7 @@ public class Permutations {
 	 * @param j
 	 * @return charArray
 	 */
-	public String swap(String a, int i, int j){
+	public String swap(String a, int i, int j) {
 		char temp;
 		char[] charArray = a.toCharArray();
 		temp = charArray[i];
@@ -33,12 +38,12 @@ public class Permutations {
 	 * @param end
 	 * @return permute
 	 */
-	public ArrayList<String> generatePermutations(String str, int start, int end){
-		if(start == end){
+	public List<String> generatePermutations(String str, int start, int end) {
+		if(start == end) {
 			permute.add(str);
 		}
-		else{
-			for(int i = start; i <= end; i++){
+		else {
+			for(int i = start; i <= end; i++) {
 				str = swap(str, start, i);
 				generatePermutations(str, start+1, end);
 				str = swap(str, start,i);

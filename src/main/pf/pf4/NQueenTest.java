@@ -1,12 +1,16 @@
 package main.pf.pf4;
 
 import static org.junit.Assert.*;
-
+import org.junit.Before;
 import org.junit.Test;
 
 
 public class NQueenTest {
-	NQueenProblem queens = new NQueenProblem();
+	private NQueenProblem queens = null;
+	@Before
+	public void executedBefore() {
+		queens = new NQueenProblem();
+	}
 	@Test
 	public void testNQueenProblem1() {
 		int dimension = 4;

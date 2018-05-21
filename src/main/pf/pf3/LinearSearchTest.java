@@ -1,13 +1,16 @@
 package main.pf.pf3;
 
 import static org.junit.Assert.*;
-
+import org.junit.Before;
 import org.junit.Test;
 
 
 public class LinearSearchTest {
-	LinearSearch search=new LinearSearch();
-
+	private LinearSearch search = null;
+	@Before
+	public void executedBefore() {
+		search = new LinearSearch();
+	}
 	@Test
 	public void testLinearSearch1() {
 		int expected=1;

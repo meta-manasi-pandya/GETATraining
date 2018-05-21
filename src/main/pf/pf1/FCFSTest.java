@@ -2,18 +2,22 @@ package main.pf.pf1;
 
 import static org.junit.Assert.*;
 
+import org.junit.Before;
 import org.junit.Test;
-import java.util.Arrays;
-import java.util.Arrays;
 /**
  * A class which contains all the test cases.
  */
 
 public class FCFSTest {
-	FCFS result = new FCFS();				//Object of the class
+	private FCFS result = null;				//Object of the class
+	
+	@Before
+	   public void executedBefore() {
+		result = new FCFS();
+    }
 
 	@Test
-	public void testFCFS(){ 						//Test-case 1
+	public void testFCFS() { 						//Test-case 1
 		int arrivalTime[] = new int[]{1, 5, 9, 25};
 		int jobSize[] = new int[]{12, 7, 2, 5};
 		int[][] output = result.FCFSMethod(arrivalTime, jobSize);
@@ -23,10 +27,10 @@ public class FCFSTest {
 	
 	//Function to check if both 2-D arrays are equal or not
 	
-	public boolean isArrayEqual(int expected[][], int output[][]){
-		for (int rowcounter=0; rowcounter<expected.length; rowcounter++){
-	        for (int colcounter=0; colcounter<expected[rowcounter].length; colcounter++){
-	            if (expected[rowcounter][colcounter] != output[rowcounter][colcounter]){
+	public boolean isArrayEqual(int expected[][], int output[][]) {
+		for (int rowcounter=0; rowcounter<expected.length; rowcounter++) {
+	        for (int colcounter=0; colcounter<expected[rowcounter].length; colcounter++) {
+	            if (expected[rowcounter][colcounter] != output[rowcounter][colcounter]) {
 	                return false;
 	            }
 	        }

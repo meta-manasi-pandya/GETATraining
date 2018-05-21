@@ -2,12 +2,16 @@ package main.pf.pf3;
 
 import static org.junit.Assert.*;
 
+import org.junit.Before;
 import org.junit.Test;
 
 
 public class BinaryTest {
-	BinarySearch search=new BinarySearch();
-
+	private BinarySearch search = null;
+	@Before
+	public void executedBefore() {
+		search = new BinarySearch();
+	}
 	@Test
 	public void testBinarySearch1() {
 		int expected=1;

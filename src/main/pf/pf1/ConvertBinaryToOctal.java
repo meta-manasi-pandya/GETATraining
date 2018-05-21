@@ -14,7 +14,7 @@ public class ConvertBinaryToOctal {
 	 * respectively. Decimal to Octal is done by iteratively adding the remainder of division of
 	 * decimal number by 8 multiplied by a counter which is multiple of 10.
 	 */
-	public int convertBinarytoOctal(int inputBinary){
+	public int convertBinarytoOctal(int inputBinary) {
 		int octalNumber = 0, decimalNumber = 0, counter = 0;
 			
 		while(inputBinary != 0)	{			//Binary to Decimal conversion
@@ -25,7 +25,7 @@ public class ConvertBinaryToOctal {
 		
 		counter = 1;
 		
-		while (decimalNumber != 0){			//Decimal to Octal conversion
+		while (decimalNumber != 0) {			//Decimal to Octal conversion
 		    octalNumber += (decimalNumber % 8) * counter;
 		    decimalNumber /= 8;				
 		    counter *= 10;					//Counter of multiple of 10

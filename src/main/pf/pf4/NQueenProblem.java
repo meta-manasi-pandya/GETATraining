@@ -20,26 +20,26 @@ public class NQueenProblem {
 	 * @param dimension
 	 * @return True or False
 	 */
-    public boolean isCorrect(int board[][], int row, int col, int dimension){
+    public boolean isCorrect(int board[][], int row, int col, int dimension) {
         int i, j;
  
         // Check this row on left side
-        for (i = 0; i < col; i++){
-            if (board[row][i] == 1){
+        for(i = 0; i < col; i++) {
+            if(board[row][i] == 1) {
                 return false;
             }
         }
  
         // Check upper diagonal on left side 
-        for (i=row, j=col; i>=0 && j>=0; i--, j--){
-            if (board[i][j] == 1){
+        for(i=row, j=col; i>=0 && j>=0; i--, j--) {
+            if(board[i][j] == 1) {
                 return false;
             }
         }
  
         // Check lower diagonal on left side
-        for (i=row, j=col; j>=0 && i<dimension; i++, j--){
-            if (board[i][j] == 1){
+        for(i=row, j=col; j>=0 && i<dimension; i++, j--) { 
+            if(board[i][j] == 1) {
                 return false;
             }
         }
@@ -47,19 +47,19 @@ public class NQueenProblem {
     }
  
     // A recursive function to solve NQueen problem
-    public boolean boardSolver(int board[][], int col, int dimension){
+    public boolean boardSolver(int board[][], int col, int dimension) {
         //If all queens are placed then return true
-        if (col >= dimension){
+        if(col >= dimension) {
             return true;
         }
  
         // Consider this column and try placing this queen in all rows one by one
-        for (int i = 0; i < dimension; i++){
-            if (isCorrect(board, i, col, dimension)){
+        for(int i = 0; i < dimension; i++) {
+            if(isCorrect(board, i, col, dimension)) {
                 board[i][col] = 1;
  
                 // recur to place rest of the queens
-                if (boardSolver(board, col + 1, dimension) == true){
+                if(boardSolver(board, col + 1, dimension) == true) {
                     return true;
                 }
                 board[i][col] = 0; // Backtrack

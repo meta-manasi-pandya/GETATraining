@@ -3,23 +3,29 @@ package main.pf.pf4;
 import static org.junit.Assert.*;
 
 import java.util.ArrayList;
+import java.util.List;
 
+import org.junit.Before;
 import org.junit.Test;
 
 
 public class PermutationsTest {
-	Permutations permute = new Permutations();
+	private Permutations permute = null;
+	@Before
+	public void executedBefore() {
+		permute = new Permutations();
+	}
 	@Test
 	public void testPermutations1() {
 		String inputString = "ABC";
-		ArrayList<String> expectedOutput = new ArrayList<String>();
+		List<String> expectedOutput = new ArrayList<String>();
 		expectedOutput.add("ABC");
 		expectedOutput.add("ACB");
 		expectedOutput.add("BAC");
 		expectedOutput.add("BCA");
 		expectedOutput.add("CBA");
 		expectedOutput.add("CAB");
-		ArrayList<String> resultantOutput = permute.generatePermutations(inputString, 0, 2);
+		List<String> resultantOutput = permute.generatePermutations(inputString, 0, 2);
 		
 		assertEquals(expectedOutput,resultantOutput);
 
@@ -28,7 +34,7 @@ public class PermutationsTest {
 	@Test
 	public void testPermutations2() {
 		String inputString = "ABCD";
-		ArrayList<String> expectedOutput = new ArrayList<String>();
+		List<String> expectedOutput = new ArrayList<String>();
 		expectedOutput.add("ABCD");
 		expectedOutput.add("ABDC");
 		expectedOutput.add("ACBD");
@@ -57,7 +63,7 @@ public class PermutationsTest {
 		expectedOutput.add("DACB");
 		expectedOutput.add("DABC");
 		
-		ArrayList<String> resultantOutput = permute.generatePermutations(inputString, 0, 3);
+		List<String> resultantOutput = permute.generatePermutations(inputString, 0, 3);
 		assertEquals(expectedOutput,resultantOutput);
 	}
 }

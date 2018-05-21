@@ -1,13 +1,17 @@
 package main.pf.pf2;
 import static org.junit.Assert.*;
-
+import org.junit.Before;
 import org.junit.Test;
 
-
 public class TriangularTest {
-	TriangularPattern patternObject=new TriangularPattern();
+	private TriangularPattern patternObject = null;
+	@Before
+	public void executedBefore() {
+		patternObject = new TriangularPattern();
+	}
+	
     @Test
-    public void testTriangularPattern(){
+    public void testTriangularPattern() {
         String expected[]={"12345",
                            " 1234",
                            "  123",
@@ -17,14 +21,16 @@ public class TriangularTest {
                 assertArrayEquals(expected, actual);
         
     }
+    
     @Test
-    public void testTriangularPatternSpaces(){
+    public void testTriangularPatternSpaces() {
         String expected="  ";
         String actual=patternObject.spaces(3,5);
         assertEquals(expected, actual);
     }
+    
     @Test
-    public void testTriangularPatternNumber(){
+    public void testTriangularPatternNumber() {
         String expected="12";
         String actual=patternObject.numbers(2,5);
         assertEquals(expected, actual);

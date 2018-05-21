@@ -1,15 +1,21 @@
 package main.pf.pf1;
 import static org.junit.Assert.*;
 
+import org.junit.Before;
 import org.junit.Test;
 /**
  * A class which contains all the test cases.
  */
 public class JoinTest {
-	Join result = new Join();				//Object is created
+	private Join result = null;				//Object is created
+
+	@Before
+	   public void executedBefore() {
+		result = new Join();
+	}
 
 	@Test
-	public void testJoin1(){				//Test-case 1
+	public void testJoin1() {				//Test-case 1
 		int[] array1= new int[]{1,3,5,7};
 		int[] array2= new int[]{2,4,8,9};
 		int asize = array1.length;

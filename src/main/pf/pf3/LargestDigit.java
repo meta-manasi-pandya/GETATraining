@@ -17,19 +17,19 @@ public class LargestDigit {
 	 * @param x
 	 * @return 0 or newDigit or digit
 	 */
-	int largestDigit(int x) {
+	public int largestDigit(int x) {
 		
 		int digit, newDigit;
-		if(x == 0){
+		if(x == 0) {
 			return 0;
 		}
-		else{
+		else {
 			digit = x % 10;
 			newDigit = largestDigit(x / 10);
-			if(newDigit > digit){
+			if(newDigit > digit) {
 				return newDigit;
 			}
-			else{
+			else {
 				return digit;
 			}
 		}

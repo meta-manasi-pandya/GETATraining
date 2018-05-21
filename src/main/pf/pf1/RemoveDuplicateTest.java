@@ -1,6 +1,7 @@
 package main.pf.pf1;
 import static org.junit.Assert.*;
 
+import org.junit.Before;
 import org.junit.Test;
 /**
  * A class which contains all the test cases.
@@ -8,7 +9,12 @@ import org.junit.Test;
 
 public class RemoveDuplicateTest {
 	
-	RemoveDuplicate duplicate = new RemoveDuplicate();		//Object is created
+	private RemoveDuplicate duplicate = null;		//Object is created
+
+	@Before
+	   public void executedBefore() {
+		duplicate = new RemoveDuplicate();
+    }
 
 	@Test
 	public void testRemoveDuplicate1() {						   //Test-case 1
